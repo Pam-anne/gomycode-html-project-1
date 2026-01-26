@@ -5,142 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
 
-    <!-- Basic Styling -->
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        text-align: center;
-        background-color: #f4f4f4;
-      }
-
-      nav {
-        background-color: #333;
-        color: white;
-        padding: 15px 0;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #00bcd4;
-      }
-
-      section {
-        background: white;
-        margin: 30px auto;
-        padding: 20px;
-        border-radius: 10px;
-        width: 80%;
-        max-width: 800px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      img {
-        border-radius: 50%;
-      }
-
-      table {
-        margin: 0 auto;
-        border-collapse: collapse;
-        width: 100%;
-      }
-
-      th,
-      td {
-        border: 1px solid #ccc;
-        padding: 10px;
-      }
-
-      th {
-        background-color: #333;
-        color: white;
-      }
-
-      /* Contact Form Styling */
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .form-row {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-      }
-
-      input,
-      textarea {
-        padding: 10px;
-        width: 100%;
-        max-width: 350px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      textarea {
-        height: 100px;
-      }
-
-      button {
-        background-color: #333;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #00bcd4;
-      }
-
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 20px;
-      }
-    </style>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts: Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
+    <!-- Header / Navbar -->
     <header>
-      <!-- Navbar -->
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <!-- Home Section -->
-      <section id="home">
-        <img src="passport.jpeg" alt="My Profile Picture" width="200" />
-        <h1>Hi,I'm Pamela</h1>
-        <p>
-          As a dedicated <strong>web developer and freelancer</strong>, I excel
-          in crafting visually striking and interactive websites. Currently
-          exploring the
-          <strong>GomyCode Software Development Course</strong> to build
-          scalable web solutions.
-        </p>
+      <!-- Home Section with Background Video -->
+      <section id="home" class="section home-section">
+        <!-- Background Video -->
+        <video autoplay muted loop id="bg-video">
+          <source src="video/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Content Overlay -->
+        <div class="home-content">
+          <img
+            src="image/passport.jpeg"
+            alt="My Profile Picture"
+            class="profile-img"
+          />
+          <h1>Hi, I'm Pamela</h1>
+          <p>
+            As a dedicated <strong>web developer and freelancer</strong>, I
+            excel in crafting visually striking and interactive websites.
+            Currently exploring the
+            <strong>GomyCode Software Development Course</strong>
+            to build scalable web solutions.
+          </p>
+        </div>
       </section>
 
       <!-- About Section -->
-      <section id="about">
+      <section id="about" class="section about-section">
         <h2>About Me</h2>
         <p>
           I am a junior developer passionate about building web applications and
@@ -152,53 +68,76 @@
       </section>
 
       <!-- Work Section -->
-      <section id="work">
+      <section id="work" class="section work-section">
         <h2>My Work</h2>
+
+        <!-- Technologies List -->
         <h3>Technologies</h3>
-        <ul type="square" style="list-style-position: inside; text-align: left; display: inline-block;">
+        <ul class="tech-list">
           <li>Python</li>
           <li>PHP</li>
           <li>HTML</li>
           <li>CSS</li>
           <li>Laravel</li>
         </ul>
-        <table>
-          <tr>
-            <th>Project</th>
-            <th>Description</th>
-            <th>Link</th>
-          </tr>
-          <tr>
-            <td>Video Template Marketplace</td>
-            <td>Video template marketplace with secure backend system.</td>
-            <td><a href="https://qonsistic.com/" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Portfolio Website</td>
-            <td>My portfolio showcasing my skills.</td>
-            <td><a href="https://pamportfolio.netlify.app/" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>Weather App</td>
-            <td>Displays live weather updates; deployed on Netlify.</td>
-            <td><a href="https://pamsweather.netlify.app/" target="_blank">View</a></td>
-          </tr>
+
+        <!-- Projects Table -->
+        <table class="projects-table">
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Video Template Marketplace</td>
+              <td>Video template marketplace with secure backend system.</td>
+              <td><a href="https://qonsistic.com/" target="_blank">View</a></td>
+            </tr>
+            <tr>
+              <td>Portfolio Website</td>
+              <td>My portfolio showcasing my skills.</td>
+              <td>
+                <a href="https://pamportfolio.netlify.app/" target="_blank"
+                  >View</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Weather App</td>
+              <td>Displays live weather updates; deployed on Netlify.</td>
+              <td>
+                <a href="https://pamsweather.netlify.app/" target="_blank"
+                  >View</a
+                >
+              </td>
+            </tr>
+          </tbody>
         </table>
       </section>
 
       <!-- Resume Section -->
-      <section id="resume">
+      <section id="resume" class="section resume-section">
         <h2>Resume</h2>
-        <p>Download my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+        <p>
+          Download my resume
+          <a href="files/resume.pdf" target="_blank">here</a>.
+        </p>
+
+        <!-- Audio Example -->
         <audio controls>
-          <source src="coding-night-112186.mp3" type="audio/mpeg" />
+          <source src="audio/coding-night-112186.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact">
+      <section id="contact" class="section contact-section">
         <h2>Contact Me</h2>
+
+        <!-- Contact Form -->
         <form action="#" method="post">
           <div class="form-row">
             <input
@@ -229,8 +168,14 @@
       </section>
     </main>
 
-    <footer>
+    <!-- Footer Section -->
+    <footer class="footer">
       <p>Copyright © 2026 Pamela Abaki</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+        <a href="https://github.com" target="_blank">GitHub</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+      </div>
     </footer>
   </body>
 </html>
