@@ -338,7 +338,9 @@ html {
 .footer .social-icons a:hover {
   color: #e0f7fa;
   text-decoration: underline;
+  border-right: 2px solid #ccc;
 }
+
 
 /* ===============================
    Responsive Design
@@ -385,4 +387,5 @@ html {
   .projects-table td {
     padding: 8px;
   }
+  
 }

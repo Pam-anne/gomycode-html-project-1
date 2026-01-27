@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <title>My Portfolio</title>
 
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- Google Fonts: Roboto -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -33,23 +33,24 @@
       <section id="home" class="section home-section">
         <!-- Background Video -->
         <video autoplay muted loop id="bg-video">
-          <source src="video/background.mp4" type="video/mp4" />
+          <source src="media/video/background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <!-- Content Overlay -->
         <div class="home-content">
           <img
-            src="image/passport.jpeg"
+            src="media/image/passport.jpeg"
             alt="My Profile Picture"
             class="profile-img"
           />
           <h1>Hi, I'm Pamela</h1>
           <p>
-            As a dedicated <strong>web developer and freelancer</strong>, I
-            excel in crafting visually striking and interactive websites.
-            Currently exploring the
-            <strong>GomyCode Software Development Course</strong>
+            As a dedicated
+            <span class="text-bold">web developer and freelancer</span>, I excel
+            in crafting visually striking and interactive websites. Currently
+            exploring the
+            <span class="text-bold">GomyCode Software Development Course</span>
             to build scalable web solutions.
           </p>
         </div>
@@ -61,8 +62,8 @@
         <p>
           I am a junior developer passionate about building web applications and
           learning new technologies. With expertise in
-          <strong>HTML, CSS, PHP, and modern frameworks</strong>, I create
-          responsive, pixel-perfect designs that deliver excellent user
+          <span class="text-bold">HTML, CSS, PHP, and modern frameworks</span>,
+          I create responsive, pixel-perfect designs that deliver excellent user
           experiences.
         </p>
       </section>
@@ -72,14 +73,16 @@
         <h2>My Work</h2>
 
         <!-- Technologies List -->
-        <h3>Technologies</h3>
-        <ul class="tech-list">
-          <li>Python</li>
-          <li>PHP</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Laravel</li>
-        </ul>
+        <div>
+          <h3>Technologies</h3>
+          <ul class="tech-list">
+            <li>Python</li>
+            <li>PHP</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Laravel</li>
+          </ul>
+        </div>
 
         <!-- Projects Table -->
         <table class="projects-table">
@@ -123,12 +126,12 @@
         <h2>Resume</h2>
         <p>
           Download my resume
-          <a href="files/resume.pdf" target="_blank">here</a>.
+          <a href="media/files/resume.pdf" target="_blank">here</a>.
         </p>
 
         <!-- Audio Example -->
         <audio controls>
-          <source src="audio/coding-night-112186.mp3" type="audio/mpeg" />
+          <source src="media/audio/coding-night-112186.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
       </section>
@@ -171,11 +174,13 @@
     <!-- Footer Section -->
     <footer class="footer">
       <p>Copyright © 2026 Pamela Abaki</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-        <a href="https://github.com" target="_blank">GitHub</a> |
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-      </div>
+      <nav class="social-icons">
+        <ul>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com" target="_blank">GitHub</a></li>
+          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>
